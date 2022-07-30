@@ -1,5 +1,5 @@
 #Given an unsorted array arr[] of size N having both negative and positive integers. The task is place all negative element at the end of array without changing the order of positive element and negative element.
-class Solution:
+'''class Solution:
     def segregateElements(self, arr, n):
         pt,nt=0,0
         ar=[]
@@ -19,4 +19,5 @@ class Solution:
         arr.clear()
         for i in range(n):
             arr.append(ar[i])
- 
+ '''
+print(10%(10**9+7))
