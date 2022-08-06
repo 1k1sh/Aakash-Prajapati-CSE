@@ -29,7 +29,11 @@ def insert_at_kth(head,data,k):
     temp=ptr.next
     ptr.next=Node(data)
     ptr.next.next=temp
-    
+def reverse_ll(head):
+    ptr=head
+    if ptr.next==None:
+        return
+          
 
 n=Node(1,Node(2,Node(3,Node(4,Node(5)))))
 insert_inlast(n,9)
