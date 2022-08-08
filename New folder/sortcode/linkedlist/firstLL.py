@@ -1,3 +1,6 @@
+from email.header import Header
+
+
 class Node:
    def __init__(self,data,next=None):
     self.data=data
@@ -30,17 +33,22 @@ def insert_at_kth(head,data,k):
     ptr.next=Node(data)
     ptr.next.next=temp
 def reverse_ll(head):
-    ptr=head
-    if ptr.next==None:
-        return
-          
+    if head==None:
+        return head
+    if head.next==None:
+        return head
+    h2=reverse_ll(head.next)
+    head.next.next=head
+    head.next=None
+    return(h2)
+        
+
 
 n=Node(1,Node(2,Node(3,Node(4,Node(5)))))
-insert_inlast(n,9)
-s=insert_atfirst(n,1)
-insert_at_kth(s,10,4)
-print_ll(s)
 
+
+reverse_ll(n)
+print(n)
 
   
 
